@@ -2,7 +2,7 @@
 
 Demo application to showcase .Net Core API authentication using JSON Web Token
 
-###How to setup
+### How to setup
 1. Add a controller.
 2. Add post route to authenticate the user.
 3. Add ```app.UseAuthentication();``` to Startup.cs file. This needs to be before ```UseAuthorization```. This is to configure authentication middleware.
@@ -62,7 +62,7 @@ Demo application to showcase .Net Core API authentication using JSON Web Token
     ```
 13. Add ```[Authorize]``` attribute to the controller and ```[AllowAnonymous]``` attribute to authenticate route.
 
-###How to test
+### How to test
 1. Send a Post request to ```api/course/authenticate``` with a JSON object ```{ "username" : "user1", "password" : "password1" }``` in the request body. This will send back the JWT.
 2. Send a Get request to ```api/course``` with bellow details in the request header.
   a. key - Authorization
