@@ -14,7 +14,7 @@ Demo application to showcase .Net Core API authentication using JSON Web Token
     - authenticates the user
     - if the user credentials not verified return null.
     - else 
-    ```
+    ```C#
       JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
       byte[] tokenKey = Encoding.ASCII.GetBytes(_key);
       SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
@@ -40,7 +40,7 @@ Demo application to showcase .Net Core API authentication using JSON Web Token
     - Add ```services.AddAuthentication()``` to ```ConfigureServices``` in Startup file.
     - Provide the default authentication scheme and default challenge scheme as jwt defaults. 
     - 
-    ```
+    ```C#
       services
         .AddAuthentication(x =>
         {
